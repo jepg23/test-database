@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Patient & Procedure Database</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Patient & Procedure Database</h1>
+
+  <!-- Search & Filter -->
+  <section class="card">
+    <h2>Search & Filter</h2>
+    <input id="searchText" placeholder="Search patient by name" />
+    <select id="genderFilter">
+      <option value="">All Genders</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+    <button onclick="clearFilters()">Clear Filters</button>
+  </section>
+
+  <!-- Patient Form -->
+  <section class="card">
+    <h2 id="patientFormTitle">Add Patient</h2>
+    <input id="patientName" placeholder="Full Name" />
+    <input id="patientDob" type="date" />
+    <input id="patientGender" placeholder="Gender" />
+    <button onclick="savePatient()">Save Patient</button>
+  </section>
+
+  <!-- Procedure Form -->
+  <section class="card">
+    <h2 id="procedureFormTitle">Add Procedure</h2>
+    <select id="procedurePatient"></select>
+    <input id="procedureDesc" placeholder="Procedure Description" />
+    <input id="procedureDate" type="date" />
+    <button onclick="saveProcedure()">Save Procedure</button>
+  </section>
+
+  <!-- Records -->
+  <section class="card">
+    <h2>Patient Records</h2>
+    <div id="records"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
